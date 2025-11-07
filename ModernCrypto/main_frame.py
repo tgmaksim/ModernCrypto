@@ -1,8 +1,10 @@
 from tkinter import Frame, Misc
+from aes import AESFrame
 
 
 class MainFrame(Frame):
-    BG_COLOR = "#e9edf5"
-
     def __init__(self, master: Misc):
-        Frame.__init__(self, master, bg=self.BG_COLOR)
+        Frame.__init__(self, master)
+        self.frames: list[Frame] = []
+        self.frames.append(AESFrame(self))
+        self.frames[0].place(relwidth=1, relheight=1)

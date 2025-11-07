@@ -22,6 +22,7 @@ class Application(Tk):
         self.menu = Menu(self)
         self.menu.place(width=WIDTH // 4, relheight=1)
 
+        # Основная (рабочая) область программы
         self.main_frame = MainFrame(self)
         self.main_frame.place(x=WIDTH // 4, relheight=1, width=0.75 * WIDTH)
 
